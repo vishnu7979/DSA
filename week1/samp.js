@@ -213,6 +213,61 @@ class Node{
         
     }
 
+
+    removebyvalue(value){
+        if(this.isEmpty()){
+            return null;
+        }
+
+        if(this.head.value===value){
+            let removednode=this.head;
+            this.head=removednode.next;
+            this.size--;
+            return value;
+        }else{
+            let prev=this.head;
+            while(prev.next&&prev.next.value!==value){
+                prev=prev.next
+            }
+            let removednode=prev.next;
+            prev.next=removednode.next
+            this.size--;
+            return value;
+        }
+        return null;
+    }
+
+
+
+    search(value){
+    if(this.isEmpty()){
+        return null;
+    }else{
+        let i=0;
+        let curr=this.head;
+        while(curr){
+            if(curr.value===value){
+                return i;
+            }
+            curr=curr.next;
+            i++;
+        }
+    }
+}
+
+
+reverse(){
+    let prev=null;
+    let curr=this.head;
+    while(curr){
+        let next=curr.next;
+        curr.next=prev;
+        prev=curr;
+        curr=next;
+    }
+    this.head=prev;
+}
+
     print()
     {
         if(this.isEmpty()){
@@ -224,10 +279,9 @@ class Node{
                 listvalues += `${curr.value},`;
                 curr=curr.next;
             }
-            console.log("The list values are : ",listvalues);
+            console.log( listvalues);
         }
     }
-    
     }
     
     const list= new LinkedList();
@@ -248,11 +302,16 @@ list.insert(10,0)
     list.insert(50,2)
     list.print();
  
-    list.remove(100)
+    
+    list.reverse()
     list.print();
+
     
     console.log(list.getSize())
     console.log(list.isEmpty())
+
+   
+    
     
     
     
