@@ -15,6 +15,7 @@ return -1;
 }
 
 
+
 const a =[1,2,3,4,5,6,7,8,9,19];
 const k = 191;
 let result=rbs(a,k)
@@ -24,3 +25,4 @@ if(result===-1){
 }else{
     console.log(`item found at index ${result}`);
 }
+

@@ -25,4 +25,4 @@ function ispower(n){
     return (n&(n-1))===0
 }
 
-console.log(ispower(127))
+console.log(ispower(128))

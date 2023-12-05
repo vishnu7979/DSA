@@ -290,7 +290,7 @@ reverse(){
     console.log(list.isEmpty())
     list.print();
 
-list.insert(10,0)
+    list.insert(10,0)
     list.print();
 
     list.insert(20,0)
