@@ -17,12 +17,12 @@
 
 // console.log(ispower(128))
 
-function ispower(n){
+function power(n){
     if(n<1){
         return false;
     }
-    
     return (n&(n-1))===0
 }
+console.log(power(8));
 
-console.log(ispower(128))
+

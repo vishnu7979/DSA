@@ -311,8 +311,3 @@ reverse(){
     console.log(list.isEmpty())
 
    
-    
-    
-    
-    
-    
