@@ -1,41 +1,35 @@
-// function mergeSort(arr){
-//     if(arr.length<2){
-//         return arr;
+//bubble sort
+
+// function bubbleSort(a){
+//     let isSwapped;
+//   do{
+//     isSwapped=false;
+//     for(let j=0;j<a.length-1;j++){
+//         if(a[j]>a[j+1]){
+//             let temp=a[j];
+//             a[j]=a[j+1];
+//             a[j+1]=temp;
+//             isSwapped=true;
+//         }
 //     }
-//     const mid=Math.floor(arr.length/2);
-//     const left=arr.slice(0,mid);
-//     const right=arr.slice(mid);
-//     return merge(mergeSort(left),mergeSort(right))
+//   }while(isSwapped)
+    
 // }
 
-// function merge(left,right){
-
-//     let sorted=[];
-//     while(left.length&&right.length){
-//         if(left[0]>right[0]){
-//             sorted.push(right.shift());
-//          }else{
-//             sorted.push(left.shift());
-//          }
-//     }
-
-//      return [...sorted,...left,...right]
-
-// }
+// let a=[-2,4,-6,8,20];
+// bubbleSort(a);
+// console.log(a);
 
 
-// let a=[9,1,34,-8,43];
-// console.log(mergeSort(a));
 
 
 
 //insertion sort
 
-// function insertionsort(a){
+// function insertionSort(a){
 //     for(let i=1;i<a.length-1;i++){
 //         let n=a[i];
 //         let j=i-1;
-
 //         while(j>=0&&a[j]>n){
 //             a[j+1]=a[j];
 //             j--;
@@ -44,91 +38,78 @@
 //     }
 // }
 
-// let a=[9,1,34,-8,43];
-// insertionsort(a);
+
+// let a=[-2,4,-6,8,20];
+// insertionSort(a);
 // console.log(a);
 
-//quick sort;
+
+// quick sort
 
 // function quickSort(a){
-    
-// if(a.length<2){
-//     return a
-// }
-    
-//     let pivot=a.length-1;
-//     let left=[];
-//     let right=[];
 
-//     for(let i=0;i<pivot;i++){
-       
-//             if(a[i]<a[pivot]){
-//                 left.push(a[i]);
-//             }else{
-//                 right.push(a[i]);
-//             }
-   
+//     if(a.length<2){
+//         return a
 //     }
 
-//     return [...quickSort(left),a[pivot],...quickSort(right)]
+//     let m=a.length-1;
+//         let left=[];
+//         let right=[];
+//     for(let i=0;i<m;i++){
+//         if(a[i]<a[m]){
+//             left.push(a[i]);
+//         }else{
+//             right.push(a[i]);
+//         }
+//     }
+
+//     return [...quickSort(left),a[m],...quickSort(right)]
 // }
 
-// let a=[9,1,34,-8,43];
+// let a=[-2,4,-6,8,20];
 // console.log(quickSort(a));
-
 
 
 //merge sort
 
-// function mergeSort(arr){
-//     if(arr.length<2){
-//         return arr
-//     };
-//     let mid=Math.floor(arr.length/2);
-//     let leftArr=arr.slice(0,mid);
-//     let rightArr=arr.slice(mid)
-
-//     return merge(mergeSort(leftArr),mergeSort(rightArr));
-
+// function mergeSort(a){
+//     if(a.length<2){
+//     return a
+//     }
+//     let m=Math.floor(a.length/2);
+//     let leftArr=a.slice(0,m);
+//     let rightArr=a.slice(m);
+//     return merge(mergeSort(leftArr),mergeSort(rightArr))
 // }
 
-// function merge(leftArr,rightArr){
+// function merge(left,right){
 //     let sortedArr=[];
-//     while(leftArr.length&&rightArr.length){
-//         if(leftArr[0]>rightArr[0]){
-//             sortedArr.push(rightArr.shift())
+//     while(left.length&&right.length){
+//         if(left[0]>right[0]){
+//             sortedArr.push(right.shift())
 //         }else{
-//             sortedArr.push(leftArr.shift())
+//             sortedArr.push(left.shift())
 //         }
 //     }
 
-//     return [...sortedArr,...leftArr,...rightArr]
+//     return [...sortedArr,...left,...right]
 // }
 
 
-// let a=[9,1,34,-8,43];
+// let a=[-2,4,-6,8,20];
 // console.log(mergeSort(a));
 
-
-//selection sort
+// selection sort
 
 function selectionSort(a){
+    if(a.length<2){
+        return a
+    }
+    let m = a[i];
     for(let i=0;i<a.length-1;i++){
-        let m=i;
-        for(let j=i+1;j<a.length-1;j++){
-            if(a[m]>a[j]){
-                let temp=a[j];
-                a[j]=a[m];
-                a[m]=temp;
-            }
-        }
+       if(a[i]<m){
+            
+       }
 
- 
     }
 }
-
-let a=[3,2,5,1,8,-76,56];
-selectionSort(a);
-console.log(a);
-
-
