@@ -7,9 +7,8 @@ class hashtable{
     hash(key){
         let total=0;
         for(let i=0;i<key.length;i++){
-            total+=key.charCodeAt(i)
+            total+=key.charCodeAt(i);
         }
-
         return total%this.size;
     }
 
@@ -19,7 +18,7 @@ class hashtable{
     }
 
     get(key){
-        const index=this.hash(key);
+        const index=this.hash(key) 
         return this.table[index]
     }
 
@@ -29,19 +28,17 @@ class hashtable{
     }
 
     display(){
-        for(let i=0;i<this.table.length;i++){
+        for (let i = 0; i < this.table.length; i++) {
             if(this.table[i]){
                 console.log(i,this.table[i]);
             }
-
         }
     }
-
 }
 
-const table=new hashtable(40);
-
-table.set("name","bruce")
-table.set("age", 25);
-table.set('eag',98)
-table.display()
+const table=new hashtable(50);
+table.set('name','qmsdfagmu');
+table.set('age',47)
+table.set('amen','ugfmmq');
+table.remove('mane')
+table.display();
