@@ -193,12 +193,16 @@ class CircularQueue{
         return this.length===this.capacity;
     }
 
+    isEmpty(){
+        return this.length===0;
+    }
+
     enqueue(value){
         if(this.isFull()){
             console.log('queue is full');
             return null
         }else{
-            
+
             this.rear=(this.rear+1)%this.capacity;
             this.items[this.rear]=value;
             this.length++;
@@ -208,4 +212,53 @@ class CircularQueue{
         }
     }
 
+    dequeue(){
+        if(this.isEmpty()){
+            console.log("queue is empty");
+            return null;
+        }else{
+            const item=this.items[this.front];
+            this.items[this.front]=null;
+            this.front=(this.front+1)%this.capacity;
+            this.length--;
+            if(this.isEmpty()){
+                this.rear=-1;
+                this.front=-1;
+            }
+        }
+    }
+
+    peek(){
+        return this.items[this.front];
+    }
+
+    print(){
+        if(this.isEmpty()){
+            return null;
+        }else{
+            let i;
+            let str='';
+            for(i=this.front;i!=this.rear;i=(i+1)%this.capacity){
+                str+=this.items[i]+"  ";
+            }
+            str+=this.items[i];
+            console.log(str);
+        }
+    }
+
 }
+
+const queue=new CircularQueue(5);
+
+
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+queue.enqueue(40);
+queue.enqueue(50);
+queue.dequeue()
+queue.enqueue(60);
+
+console.log(queue.peek());
+queue.print();
+

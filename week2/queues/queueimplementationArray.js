@@ -43,7 +43,6 @@ queue.enqueue(20);
 queue.enqueue(30);
 console.log(queue.size());
 queue.print();
-
 queue.dequeue();
 queue.dequeue();
 console.log(queue.peek());

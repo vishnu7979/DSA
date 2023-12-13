@@ -303,11 +303,13 @@ reverse(){
     list.print();
  
     
-    list.reverse()
+    list.reverse();
     list.print();
 
     
-    console.log(list.getSize())
-    console.log(list.isEmpty())
+    console.log(list.getSize());
+    console.log(list.isEmpty());
 
    
+
+    
