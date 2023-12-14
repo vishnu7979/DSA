@@ -93,12 +93,11 @@ class Node{
   const stack=new Stack();
   console.log(stack.isEmpty());
   console.log(stack.getSize());
- 
+
 stack.push(20);
 stack.push(230);
 stack.push(290);
 stack.pop();
-
 stack.print(); 
  
  

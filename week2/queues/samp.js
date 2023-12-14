@@ -458,68 +458,148 @@
 
 
 
+// class CircularQueue{
+//     constructor(capacity){
+//         this.list=new Array(capacity)
+//         this.capacity=capacity;
+//         this.length=0;
+//         this.rear=-1;
+//         this.front=-1;
+//     }
+
+
+//     isEmpty(){
+//         return  this.length===0
+//     }
+
+//     isFull(){
+
+//         return this.capacity===this.length
+//     }
+
+//     peek(){
+//         return this.list[this.front]
+//     }
+
+//     enqueue(value){
+//         this.rear=(this.rear+1)%this.capacity;
+//         this.list[this.rear]=value;
+//         this.length++;
+//         if(this.front===-1){
+//             this.front=this.rear;
+//         }
+//     }
+    
+//     dequeue(){
+//         if(this.isEmpty()){
+//             console.log("emptyyyyyyyyyy");
+//         }else{
+//             this.list[this.front]=null;
+//             this.front=(this.front+1)%this.capacity;
+//             this.length--;
+//             if(this.isEmpty()){
+//                 this.rear=-1;
+//                 this.front=-1;            }
+//         }
+//     }
+
+//     print(){
+//         if(this.isEmpty()){
+//             console.log("emptyyyyyyyy");
+//         }else{
+//             let str='';
+//             let i;
+//             for(i=this.front;i!=(this.rear);i=(i+1)%this.capacity){
+//                 str+=this.list[i]+' '
+//             }
+//             str+=this.list[i];
+//             console.log(str);
+//         }
+//     }
+
+// }
+
+
+
+// const cq=new CircularQueue(5);
+// cq.print()
+// cq.enqueue(10);
+// cq.enqueue(20);
+// cq.enqueue(30);
+// cq.enqueue(40);
+// cq.enqueue(50);
+// cq.dequeue();
+// cq.enqueue(10);
+// console.log(cq.peek());
+// cq.print()
+
 class CircularQueue{
     constructor(capacity){
-        this.list=new Array(capacity)
+        this.list=new Array(capacity);
         this.capacity=capacity;
-        this.length=0;
+        this.length=0
         this.rear=-1;
         this.front=-1;
     }
 
-
     isEmpty(){
-        return  this.length===0
+       return  this.length===0;
     }
-
+    
     isFull(){
-
-        return this.capacity===this.length
+        return this.capacity===this.length;
     }
 
-    peek(){
-        return this.list[this.front]
+    size(){
+        return this.length;
     }
 
     enqueue(value){
-        this.rear=(this.rear+1)%this.capacity;
-        this.list[this.rear]=value;
-        this.length++;
-        if(this.front===-1){
-            this.front=this.rear;
+        if(this.isFull()){
+            console.log("fulll");
+        }else{
+            this.rear=(this.rear+1)%this.capacity;
+            this.list[this.rear]=value;
+            this.length++;
+            if(this.front===-1){
+                this.front=this.rear;
+            }
         }
     }
-    
+
     dequeue(){
+
         if(this.isEmpty()){
-            console.log("emptyyyyyyyyyy");
-        }else{
+            console.log("emptyyyyyyyy");
+        }
+        else{
             this.list[this.front]=null;
             this.front=(this.front+1)%this.capacity;
             this.length--;
             if(this.isEmpty()){
                 this.rear=-1;
-                this.front=-1;            }
+                this.front=-1;
+            }
         }
     }
 
     print(){
-        if(this.isEmpty()){
-            console.log("emptyyyyyyyy");
-        }else{
-            let str='';
-            let i;
-            for(i=this.front;i!=(this.rear);i=(i+1)%this.capacity){
-                str+=this.list[i]+' '
-            }
-            str+=this.list[i];
-            console.log(str);
+        if (this.isEmpty()) {
+            return "empy"
         }
+        let i;
+        let str='';
+        for(i=this.front;i!=this.rear;i=(i+1)%this.capacity){
+            str+=this.list[i]+" ";
+        }
+        str+=this.list[i];
+        console.log(str);
+
     }
+    
+
 
 }
-
-
 
 const cq=new CircularQueue(5);
 cq.print()
@@ -530,6 +610,4 @@ cq.enqueue(40);
 cq.enqueue(50);
 cq.dequeue();
 cq.enqueue(10);
-console.log(cq.peek());
 cq.print()
-

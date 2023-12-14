@@ -11,6 +11,7 @@ function selection(a){
     }
 }
 
+
 let a=[3,4,2,1,9,4,3,-87,43];
 selection(a);
 console.log(a);
