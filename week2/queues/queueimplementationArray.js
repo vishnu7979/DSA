@@ -46,3 +46,4 @@ queue.print();
 queue.dequeue();
 queue.dequeue();
 console.log(queue.peek());
+queue.print();

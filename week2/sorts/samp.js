@@ -363,3 +363,123 @@
 
 //,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,...........................................................................
 
+
+
+//bubbleSort
+
+// function bubbleSort(a){
+// let Swapped;
+//    do{
+//     Swapped=false;
+//     for(let i=0;i<a.length-1;i++){
+//         if(a[i]<a[i+1]){
+//             let temp=a[i];
+//             a[i]=a[i+1];
+//             a[i+1]=temp;
+//             Swapped=true;
+//         }
+
+//     }
+//    }while(Swapped)
+// }
+
+
+// let arr=[-2,8,24,-28,0,87];
+// bubbleSort(arr)
+// console.log(arr);
+
+//insertionSort
+
+// function insertionSort(a){
+//     for (let i = 0; i < a.length; i++) {
+//         let j=i-1;
+//         let n=a[i];
+//         while (j>=0&&a[j]>n) {
+//             a[j+1]=a[j];
+//             j--;
+//         }
+//         a[j+1]=n;
+//     }
+// }
+
+
+
+// let arr=[-2,8,24,-28,0,87];
+// insertionSort(arr)
+// console.log(arr);
+
+//quickSort
+
+// function quickSort(a){
+//     if(a.length<2){
+//         return a
+//     }
+//     let pivot=a.length-1;
+//     let left=[];
+//     let right=[];
+//     for (let i = 0; i < pivot; i++) {
+//         if(a[i]>a[pivot]){
+//             right.push(a[i]);
+//         }else{
+//             left.push(a[i]);
+//         }
+//     }
+
+//     return [...quickSort(left),a[pivot],...quickSort(right)]
+// }
+
+// let arr=[-2,8,24,-28,0,87];
+// console.log(quickSort(arr));
+
+// mergeSort
+
+// function mergeSort(a){
+//     if(a.length<2){
+//         return a
+//     }
+//     let mid=Math.floor(a.length/2);
+//     let leftArr=a.slice(0,mid)
+//     let rightArr=a.slice(mid)
+
+//     return merge(mergeSort(leftArr),mergeSort(rightArr))
+
+// }
+
+// function merge(left,right){
+//     let sortedArr=[];
+//     while(left.length && right.length){
+//         if(left[0]<right[0]){
+//             sortedArr.push(left.shift())
+//         }else{
+//             sortedArr.push(right.shift())
+//         }
+//         }
+//         return [...sortedArr,...left,...right]
+//     }
+
+// let arr=[-2,8,24,-28,0,87];
+// console.log(mergeSort(arr));
+
+
+//selection sort
+
+// function selectionsort(a){
+
+//     for (let i = 0; i < a.length-1; i++) {
+//         let key=i;
+//         for (let j = i+1; j < a.length-1; j++) {
+//                 if (a[j]<a[key]) {
+//                     let temp=a[j];
+//                     a[j]=a[key];
+//                     a[key]=temp;
+//                 }
+//         }        
+//     }
+// }
+
+// let arr=[-2,8,24,-28,0,87];
+// selectionsort(arr)
+// console.log(arr);
+
+
+//--------------------------------------------------------------------------------------------------------
