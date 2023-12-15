@@ -2,7 +2,7 @@ function bubbleSort(arr){
     let isSwapped;
     do{
         isSwapped=false;
-        for(let i=0;i<arr.length-1;i++){
+        for(let i=0;i<(arr.length);i++){
             if(arr[i]>arr[i+1]){
                 let temp=arr[i];
                 arr[i]=arr[i+1];
