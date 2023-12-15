@@ -259,133 +259,78 @@
 // selectionSort(a)
 // console.log(a);
 
-// class Table{
-//   constructor(size){
-//     this.table=new Array(size)
-//     this.size=size;
-//   }
-
-//   hash(key){
-//     let num=0;
-//     for(let i=0;i<key.length;i++){
-//         num+=key.charCodeAt(i)
-//     }
-//     return num%this.size;
-//   }
-
-//   set(key,value){
-//     const index=this.hash(key);
-//     // this.table[index]=value;
-//     const bucket=this.table[index];
-//     if(!bucket){
-//       this.table[index]=[[key,value]];
-//       return
-//     }
-//     const Samekey=bucket.find(item=>item[0]===key)
-//     if(Samekey){
-//       Samekey[1]=value;
-//     }else{
-//       bucket.push([key,value])
-//     }
-
-//   }
-
-//   get(key){
-//     const index=this.hash(key);
-//     console.log(index);
-//     const bucket=this.table[index];
-//     if(bucket){
-//       const Samekey=bucket.find(item=>item[0]===key)
-//       if(Samekey){
-//         return Samekey[1];
-//       }else{
-//         return null;
-//       }
-    
-//     }
-
-//   }
-
-//   remove(key){
-//     const index=this.hash(key);
-//     // this.table[index]=undefined;
-//     const bucket=this.table[index];
-//     if(bucket){
-//       const Samekey=bucket.find(item=>item[0]===key)
-//       if(Samekey){
-//         bucket.slice(bucket.indexOf(Samekey),1)
-//       }
-    
-//     }
-//   }
-
-//   print(){
-//     for(let i=0;i<this.table.length;i++){
-//       if(this.table[i]){
-//         console.log(i,this.table[i]);
-//       }
-//     }
-//   } 
-// }
-
-// const table=new Table(10);
-// table.print();
-// table.set('name','vishnu')
-// table.set('enam','vishnus')
-// table.print();
-
-class Stack {
-  constructor() {
-    this.items = [];
+class Table{
+  constructor(size){
+    this.table=new Array(size)
+    this.size=size;
   }
 
-  push(element) {
-    this.items.push(element);
-  }
-
-  pop() {
-    if (this.isEmpty()) {
-      return "Underflow";
+  hash(key){
+    let num=0;
+    for(let i=0;i<key.length;i++){
+        num+=key.charCodeAt(i)
     }
-    return this.items.pop();
+    return num%this.size;
   }
 
-  isEmpty() {
-    return this.items.length === 0;
+  set(key,value){
+    const index=this.hash(key);
+    // this.table[index]=value;
+    const bucket=this.table[index];
+    if(!bucket){
+      this.table[index]=[[key,value]];
+      return
+    }
+    const Samekey=bucket.find(item=>item[0]===key)
+    if(Samekey){
+      Samekey[1]=value;
+    }else{
+      bucket.push([key,value])
+    }
+
   }
 
-  size() {
-    return this.items.length;
+  get(key){
+    const index=this.hash(key);
+    console.log(index);
+    const bucket=this.table[index];
+    if(bucket){
+      const Samekey=bucket.find(item=>item[0]===key)
+      if(Samekey){
+        return Samekey[1];
+      }else{
+        return null;
+      }
+    
+    }
+
   }
+
+  remove(key){
+    const index=this.hash(key);
+    // this.table[index]=undefined;
+    const bucket=this.table[index];
+    if(bucket){
+      const Samekey=bucket.find(item=>item[0]===key)
+      if(Samekey){
+        bucket.slice(bucket.indexOf(Samekey),1)
+      }
+    
+    }
+  }
+
+  print(){
+    for(let i=0;i<this.table.length;i++){
+      if(this.table[i]){
+        console.log(i,this.table[i]);
+      }
+    }
+  } 
 }
 
-function removeOddNumbers(stack) {
-   if (stack.isEmpty()) {
-    return;
-  }
-
-   const element = stack.pop();
-
-   removeOddNumbers(stack);
-
-   if (element % 2 === 0) {
-    stack.push(element);
-  }
-}
-
- const numberStack = new Stack();
-numberStack.push(1);
-numberStack.push(2);
-numberStack.push(3);
-numberStack.push(4);
-numberStack.push(5);
-
-console.log("Original Stack:", numberStack.items);
-
-removeOddNumbers(numberStack);
-
-console.log("Stack after removing odd numbers:", numberStack.items);
-
-
-
-
+const table=new Table(10);
+table.print();
+table.set('name','vishnu')
+table.set('enam','vishnus')
+table.print();
+ 
