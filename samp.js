@@ -262,7 +262,10 @@ class Circular{
 
     enqueue(value){
         if(this.iSFull()){
-            
+            return
         }
+        this.rear=(this.rear+1) % this.capacity;
+        this.list[this.rear]=value;
+        this.length++;
     }
 }

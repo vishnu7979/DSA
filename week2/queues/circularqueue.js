@@ -74,3 +74,4 @@ cq.dequeue();
 cq.enqueue(10);
 console.log(cq.peek());
 cq.print()
+
