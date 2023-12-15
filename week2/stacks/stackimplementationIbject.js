@@ -1,21 +1,31 @@
 class Stack{
+
+
     constructor(){
         this.list={};
         this.rear=0;
         this.head=0;
     }
+
+
     isEmpty(){
         return this.rear-this.head===0;
     }
+
+
     size(){
         return this.rear-this.head;
     }
+
+
     push(value){
         this.list[this.rear]=value;
         this.rear++;
 
     }
-    pop(value){
+
+
+    pop(){
         const item=this.list[this.head];
         delete this.list[this.head];
         this.head++;
@@ -29,6 +39,8 @@ class Stack{
             console.log(this.list);
         }
     }
+
+
 }
 
 const stack=new Stack();

@@ -44,6 +44,7 @@ class CircularQueue{
     }
 
 
+    
     peek(){
         return this.list[this.front];
     }

@@ -1,5 +1,3 @@
-
-
 class Node{
     constructor(value){
       this.value=value;
@@ -7,9 +5,8 @@ class Node{
     }
   }
  
- 
+  
 
- 
   class Stack{
     constructor(){
       this.head=null;
@@ -38,7 +35,9 @@ class Node{
       this.size++;
     }
  
- 
+
+
+
     push(value){
       const node=new Node(value)
       if(this.isEmpty()){
@@ -99,7 +98,4 @@ stack.push(230);
 stack.push(290);
 stack.pop();
 stack.print(); 
- 
- 
- 
  

@@ -243,6 +243,8 @@
 // console.log(stack.gtsize());
 
 
+
+
 class Circular{
     constructor(capacity){
         this.list=new Array(capacity)
@@ -269,3 +271,4 @@ class Circular{
         this.length++;
     }
 }
+
