@@ -43,10 +43,62 @@ class Graph{
         if(!this.list[vertex]){
             return
         }
-        for(let i in this.list[vertex]){
+        for(let i of this.list[vertex]){
             this.removeEdge(i,vertex)
         }
         delete this.list[vertex]
+    }
+
+    bfs(startingVertex){
+        const visited={}
+        const queue=[];
+        const result=[];
+
+
+        if(!this.list[startingVertex]){
+            return result;
+        }
+
+        visited[startingVertex]=true;
+        queue.push(startingVertex);
+
+        while (queue.length>0) {
+            const element=queue.shift();
+            result.push(element);
+
+            this.list[element].forEach((neighbour) => {
+                if(!visited[neighbour]){
+                    visited[neighbour]=true;
+                    queue.push(neighbour)
+                }
+            });
+        }
+        return result;
+    }
+
+    dfs(startingVertex){
+        let result=[];
+        let visited={};
+
+        const Rescursive=(vertex)=>{
+            visited[vertex]=true;
+            result.push(vertex);
+
+            this.list[vertex].forEach((neighbour)=>{
+                if(!visited[neighbour]){
+                    Rescursive(neighbour);
+                }
+            })
+        }
+
+        if(!this.list[startingVertex]){
+            return result;
+        }
+
+        Rescursive(startingVertex)
+
+        return result
+        
     }
 
 }
@@ -57,9 +109,13 @@ graph.addVertex('B');
 graph.addVertex('C');
 graph.addEdge('A','B')
 graph.addEdge('B','C');
-graph.removeVertex('B');
+console.log(graph.hasEdge('C','B'));
+// graph.removeVertex('B');
 graph.display();
 
-// console.log(graph.hasEdge('C','B'));
+console.log(graph.bfs('A'));
+console.log(graph.dfs('A'));
+
+
 
 
