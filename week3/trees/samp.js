@@ -41,6 +41,7 @@ class BinarySearchTree{
         }
     }
 
+    
     search(root,value){
         if(!root){
             return false
@@ -140,14 +141,15 @@ bst.insert(5);
 bst.insert(15);
 bst.insert(3);
 bst.insert(7);
-// console.log(bst.isEmpty());
-// console.log('preOrder');
-// bst.preOrder(bst.root);
-// console.log('inOrder');
-// bst.inOrder(bst.root);
-// console.log('postOrder');
-// bst.postOrder(bst.root);
-bst.levelOrder();
-bst.delete(7);
-console.log('deleted');
-bst.levelOrder();
+console.log(bst.isEmpty());
+console.log('preOrder');
+bst.preOrder(bst.root);
+console.log('inOrder');
+bst.inOrder(bst.root);
+console.log('postOrder');
+bst.postOrder(bst.root);
+// bst.levelOrder();
+// bst.delete(7);
+// console.log('deleted');
+// bst.levelOrder();
+
