@@ -408,7 +408,7 @@
 
 class Graph{
     constructor(){
-        this.list===null;
+        this.list={};
     }
 
     addVertex(v){
@@ -436,8 +436,8 @@ class Graph{
     }
 
     display(){
-        for (let i = 0; i < this.list.length; i++) {
-            console.log(i+"=>"+this.list[i]);
+        for (let i  in this.list) {
+            console.log(i+"=>"+[...this.list[i]]);
         }
 
     }
@@ -448,11 +448,11 @@ class Graph{
     }
 
     removeVertex(v){
-        if(this.list[v1]){
+        if(!this.list[v]){
             return null;
         }
 
-        for (const key in this.list[v]) {
+        for (const key of this.list[v]) {
              this.removeEdge(key,v)
         }
 
@@ -464,16 +464,65 @@ class Graph{
         const result=[];
         const visited={}
 
+if(this.list[s]){
+    return result;
+}
+
+        visited[s]=true;
+        queue.push(s);
+        while(queue.length){
+            let curr=queue.shift();
+            result.push(curr)
+
+            this.list.forEach((neighbour) => {
+                if (!visited[neighbour]) {
+                    visited[neighbour]=true;
+                    queue.push(neighbour)
+                }
+            });
+        }
         
 
     }
 
-    DFS(){
+    DFS(s){
+
+        const result=[];
+        const visited={};
+
+
+        const recursive= (vertex) =>{
+            visited[vertex]=true;
+            result.push(vertex)
+            
+
+            
+            this.list.forEach((neighbour) => {
+                if (!visited[neighbour]) {
+                    recursive(neighbour);
+                }
+            })
+        }
+    
+        if(this.list[s]){
+            return result;
+        }
+
+        recursive(s);
 
     }
 
 }
 
 const graph=new Graph();
+graph.addVertex(10);
+graph.addVertex(20);
+graph.addVertex(30);
+graph.addVertex(40);
+graph.addEdge(10,20);
+graph.addEdge(20,30);
+graph.addEdge(10,30);
+graph.addEdge(20,40);
+graph.removeVertex(10);
 
 graph.display()

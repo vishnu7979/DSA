@@ -160,6 +160,7 @@ function HeapSortMax(a) {
     for (let i = 0; i < a.length; i++) {
             sheap.insert(a[i]);
     }
+    
 
     let result=[]
     while (sheap.heap.length) {
