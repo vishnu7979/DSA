@@ -148,8 +148,8 @@ console.log('inOrder');
 bst.inOrder(bst.root);
 console.log('postOrder');
 bst.postOrder(bst.root);
-// bst.levelOrder();
-// bst.delete(7);
-// console.log('deleted');
-// bst.levelOrder();
+bst.levelOrder();
+bst.delete(5);
+console.log('deleted');
+bst.levelOrder();
 

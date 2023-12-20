@@ -114,6 +114,16 @@ if (root) {
         return this.isBST(root.left)&&this.isBST(root.right)
     }
 
+    
+
+    min(root){
+        if(!root.left){
+            return root.value
+        }else{
+            return this.min(root.left)
+        }
+    }
+
     delete(value){
         this.root=this.deletreNode(this.root,value)
     }
@@ -125,20 +135,21 @@ if (root) {
         if(root.value>value){
             root.left=this.deletreNode(root.left,value)
         }else if(root.value<value){
-            root.right=this.deletreNode(root.right,value)
+            root.right=this.deletreNode(root.right,value);
         }else{
             if (!root.left&&!root.right) {
                 return null;
             } 
             
             if(!root.left){
-                return root.right
+                return root.right;
             }else if(!root.right){
                 return root.left
             }
             root.value=this.min(root.right);
             root.right=this.deletreNode(root.right,root.value);
         }
+        return root
     }
 }
 
@@ -152,4 +163,8 @@ tree.insert(7);
 console.log(tree.isEmpty());
 console.log(tree.search(tree.root,10));
 tree.levelOrder();
-console.log(tree.isBST(tree.root));
+tree.delete(10)
+console.log('deleted');
+tree.levelOrder();
+// console.log(tree.isBST(tree.root));
+

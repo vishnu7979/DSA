@@ -382,6 +382,44 @@
     
 // }
 
+// min(root){
+//     if(!root.left){
+//         return root.value
+//     }
+//     return this.min(root.left)
+// }
+
+// delete(value){
+//     this.root=this.deleteNode(this.root,value)
+// }
+
+// deleteNode(root,value){
+//     if(!root){
+//         return root
+//     }
+
+//     if(root.value>value){
+//         root.left=this.deleteNode( root.left,value);
+//     }else if(root.value<value){
+//         root.right=this.deleteNode( root.right,value);
+//     }else{
+//         if (!root.left&&!root.right) {
+//             return null;
+//         }
+//         if(!root.left){
+//             return root.right;
+//         }else if(!root.right){
+//             return root.left;
+//         }
+
+//         root.value=this.min(root.right);
+//         root.right=this.deleteNode(root.right,root.value)
+
+//     }
+//     return root;
+
+// }
+
 
 // }
 
@@ -395,134 +433,141 @@
 // tree.insert(7);
 // console.log(tree.isEmpty());
 // console.log(tree.search(this.root,10));
-// tree.preOrder(tree.root);
-// tree.postOrder(tree.root);
-// tree.inOrder(tree.root);
+// // tree.preOrder(tree.root);
+// // tree.postOrder(tree.root);
+// // tree.inOrder(tree.root);
 // tree.levelOrder();
+// console.log("deleted");
+// // console.log(tree.min(tree.root));
+// tree.delete(10);
+// tree.levelOrder();
+
 
 
 // console.log(isBST(tree.root));
 
 
+
+
 // graph
 
-class Graph{
-    constructor(){
-        this.list={};
-    }
+// class Graph{
+//     constructor(){
+//         this.list={};
+//     }
 
-    addVertex(v){
-        if(!this.list[v]){
-            this.list[v]= new Set()
-        }
-    }
+//     addVertex(v){
+//         if(!this.list[v]){
+//             this.list[v]= new Set()
+//         }
+//     }
 
-    addEdge(v1,v2){
-        if (!this.list[v1]) {
-            this.addVertex(v1)
-        }
+//     addEdge(v1,v2){
+//         if (!this.list[v1]) {
+//             this.addVertex(v1)
+//         }
 
-        if (!this.list[v2]) {
-            this.addVertex(v2)
-        }
+//         if (!this.list[v2]) {
+//             this.addVertex(v2)
+//         }
 
-        this.list[v1].add(v2)
-        this.list[v2].add(v1)
-    }
+//         this.list[v1].add(v2)
+//         this.list[v2].add(v1)
+//     }
 
-    hasEdge(v1,v2){
-        return this.list[v1].has(v2)&&
-        this.list[v2].has(v1)
-    }
+//     hasEdge(v1,v2){
+//         return this.list[v1].has(v2)&&
+//         this.list[v2].has(v1)
+//     }
 
-    display(){
-        for (let i  in this.list) {
-            console.log(i+"=>"+[...this.list[i]]);
-        }
+//     display(){
+//         for (let i  in this.list) {
+//             console.log(i+"=>"+[...this.list[i]]);
+//         }
 
-    }
+//     }
 
-    removeEdge(v1,v2){
-        this.list[v1].delete(v2);
-        this.list[v2].delete(v1);
-    }
+//     removeEdge(v1,v2){
+//         this.list[v1].delete(v2);
+//         this.list[v2].delete(v1);
+//     }
 
-    removeVertex(v){
-        if(!this.list[v]){
-            return null;
-        }
+//     removeVertex(v){
+//         if(!this.list[v]){
+//             return null;
+//         }
 
-        for (const key of this.list[v]) {
-             this.removeEdge(key,v)
-        }
+//         for (const key of this.list[v]) {
+//              this.removeEdge(key,v)
+//         }
 
-        delete this.list[v];
-    }
+//         delete this.list[v];
+//     }
 
-    BFS(s){
-        const queue=[];
-        const result=[];
-        const visited={}
+//     BFS(s){
+//         const queue=[];
+//         const result=[];
+//         const visited={}
 
-if(this.list[s]){
-    return result;
-}
+// if(this.list[s]){
+//     return result;
+// }
 
-        visited[s]=true;
-        queue.push(s);
-        while(queue.length){
-            let curr=queue.shift();
-            result.push(curr)
+//         visited[s]=true;
+//         queue.push(s);
+//         while(queue.length){
+//             let curr=queue.shift();
+//             result.push(curr)
 
-            this.list.forEach((neighbour) => {
-                if (!visited[neighbour]) {
-                    visited[neighbour]=true;
-                    queue.push(neighbour)
-                }
-            });
-        }
+//             this.list.forEach((neighbour) => {
+//                 if (!visited[neighbour]) {
+//                     visited[neighbour]=true;
+//                     queue.push(neighbour)
+//                 }
+//             });
+//         }
         
 
-    }
+//     }
 
-    DFS(s){
+//     DFS(s){
 
-        const result=[];
-        const visited={};
+//         const result=[];
+//         const visited={};
 
 
-        const recursive= (vertex) =>{
-            visited[vertex]=true;
-            result.push(vertex)
+//         const recursive= (vertex) =>{
+//             visited[vertex]=true;
+//             result.push(vertex)
             
 
             
-            this.list.forEach((neighbour) => {
-                if (!visited[neighbour]) {
-                    recursive(neighbour);
-                }
-            })
-        }
+//             this.list.forEach((neighbour) => {
+//                 if (!visited[neighbour]) {
+//                     recursive(neighbour);
+//                 }
+//             })
+//         }
     
-        if(this.list[s]){
-            return result;
-        }
+//         if(this.list[s]){
+//             return result;
+//         }
 
-        recursive(s);
+//         recursive(s);
 
-    }
+//     }
 
-}
+// }
 
-const graph=new Graph();
-graph.addVertex(10);
-graph.addVertex(20);
-graph.addVertex(30);
-graph.addVertex(40);
-graph.addEdge(10,20);
-graph.addEdge(20,30);
-graph.addEdge(10,30);
-graph.addEdge(20,40);
-graph.removeVertex(10);
+// const graph=new Graph();
+// graph.addVertex(10);
+// graph.addVertex(20);
+// graph.addVertex(30);
+// graph.addVertex(40);
+// graph.addEdge(10,20);
+// graph.addEdge(20,30);
+// graph.addEdge(10,30);
+// graph.addEdge(20,40);
+// graph.removeVertex(10);
 
-graph.display()
+// graph.display()

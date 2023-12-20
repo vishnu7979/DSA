@@ -10,6 +10,7 @@ class Trie {
     this.root = new TrieNode();
   }
 
+
   insert(word) {
     let node = this.root;
 
@@ -37,7 +38,6 @@ class Trie {
   }
 
 
-
   startWith(prefix) {
     let node = this.root;
 
@@ -50,7 +50,6 @@ class Trie {
     }
     this.printWord(node, prefix);
   }
-
 
 
   remove(word) {
@@ -72,11 +71,9 @@ class Trie {
   }
 
 
-
   print() {
     return this.printWord(this.root, " ");
   }
-
 
 
   printWord(node, currentWord) {
@@ -87,8 +84,9 @@ class Trie {
       this.printWord(node.children[char], currentWord + char);
     }
   }
-}
 
+  
+}
 
 const tries = new Trie();
 
