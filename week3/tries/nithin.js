@@ -5,12 +5,17 @@ class TrieNode {
   }
 }
 
+
+
+
+
 class Trie {
   constructor() {
     this.root = new TrieNode();
   }
 
 
+  
   insert(word) {
     let node = this.root;
 
@@ -38,6 +43,7 @@ class Trie {
   }
 
 
+
   startWith(prefix) {
     let node = this.root;
 
@@ -52,28 +58,39 @@ class Trie {
   }
 
 
+
   remove(word) {
     return this.removeHelper(this.root, word, 0);
   }
 
-
+ 
   removeHelper(node, word, index) {
     if (index === word.length) {
-      return null;
+        node.end = false;  
     }
+
     let childNode = node.children[word[index]];
-    if (childNode) {
-      this.removeHelper(childNode, word, index + 1);
+
+    if (!childNode) {
+        return;  
     }
+
+    this.removeHelper(childNode, word, index + 1);
+
+     
     if (!childNode.end && Object.keys(childNode.children).length === 0) {
-      delete node.children[word[index]];
+        delete node.children[word[index]];
     }
+
   }
+
+
 
 
   print() {
     return this.printWord(this.root, " ");
   }
+
 
 
   printWord(node, currentWord) {
@@ -88,13 +105,19 @@ class Trie {
   
 }
 
+
 const tries = new Trie();
 
 tries.insert("Cat");
 tries.insert("nithi");
 tries.insert("nithin");
-console.log(tries.search("nithi"));
+console.log(tries.search("nithin"));
 tries.remove("nithin");
-console.log("Words starting with 'n':");
-tries.startWith("n");
-// tries.print()
+console.log(tries.search("nithin"));
+
+// console.log("Words starting with 'n':");
+// tries.startWith("n");
+tries.print();
+
+
+
