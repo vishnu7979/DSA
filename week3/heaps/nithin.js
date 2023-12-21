@@ -75,5 +75,3 @@ function Maxsorted(array) {
 }
 let array = [4, 5, 6, 3, 7, 8, 9, 12];
 console.log(Maxsorted(array));
-
-

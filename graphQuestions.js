@@ -136,7 +136,7 @@ class Graph{
         this.list={}
     }
 
-    addVeretx(vertex){
+    addVertex(vertex){
         if(!this.list[vertex]){
             this.list[vertex]=new Set()
         }
@@ -194,14 +194,14 @@ class Graph{
         visited[s]=true;
         queue.push(s);
 
-        while(queue.length){
+        while(queue.length>0){
             let curr=queue.shift();
             result.push(curr);
 
-            this.list[s].forEach((neighbour) => {
+            this.list[curr].forEach((neighbour) => {
                 if(!visited[neighbour]){
                     visited[neighbour]=true;
-                    result.push(neighbour);
+                    queue.push(neighbour);
                 }
             });
         }
@@ -215,12 +215,13 @@ class Graph{
         let visited={};
 
         const recursive=(start)=>{
-            visited[s]=true;
-            return result;
+            visited[start]=true;
+            result.push(start)
+            
 
-            this.list[s].forEach((neighbour) => {
+            this.list[start].forEach((neighbour) => {
                 if (!visited[neighbour]) {
-                    this.recursive(neighbour)
+                    recursive(neighbour)
                 }
             });
         }
@@ -232,10 +233,26 @@ class Graph{
 
         recursive(s);
 
-        
-
-
+        return result;
 
     }
 
 }
+
+
+const graph=new Graph();
+graph.addVertex('A');
+graph.addVertex('B');
+graph.addVertex('C');
+graph.addEdge('A','B')
+graph.addEdge('B','C');
+console.log(graph.hasEdge('C','B'));
+// graph.removeVertex('B');
+graph.display();
+
+
+
+console.log(graph.bfs('A'));
+console.log(graph.dfs('A'));
+
+
