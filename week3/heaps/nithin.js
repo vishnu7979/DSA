@@ -23,6 +23,8 @@ class MaxHeap {
     return this;
   }
 
+
+
   extract() {
     let lastIndex = this.heap.length - 1;
 
@@ -59,6 +61,8 @@ class MaxHeap {
     return largest;
   }
 }
+
+
 
 function Maxsorted(array) {
   let maxheap = new MaxHeap();

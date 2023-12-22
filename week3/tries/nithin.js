@@ -72,7 +72,7 @@ class Trie {
     let childNode = node.children[word[index]];
 
     if (!childNode) {
-        return;  
+        return false;  
     }
 
     this.removeHelper(childNode, word, index + 1);
@@ -88,7 +88,7 @@ class Trie {
 
 
   print() {
-    return this.printWord(this.root, " ");
+    return this.printWord(this.root , " ");
   }
 
 
