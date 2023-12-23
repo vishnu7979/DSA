@@ -116,6 +116,6 @@ graph.addEdge('a','b');
 graph.addEdge('a','c');
 graph.addEdge('b','d');
 // graph.removeVertex('a')
-console.log(graph.bfs('a'));
+// console.log(graph.bfs('a'));
 console.log(graph.dfs('a'));
 graph.print();
