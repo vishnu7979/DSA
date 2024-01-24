@@ -103,18 +103,18 @@
 
 // }
 
-// const graph=new Graph();
-// graph.addVertex('A');
-// graph.addVertex('B');
-// graph.addVertex('C');
-// graph.addEdge('A','B')
-// graph.addEdge('B','C');
-// console.log(graph.hasEdge('C','B'));
-// // graph.removeVertex('B');
-// graph.display();
+    // const graph=new Graph();
+    // graph.addVertex('A');
+    // graph.addVertex('B');
+    // graph.addVertex('C');
+    // graph.addEdge('A','B')
+    // graph.addEdge('B','C');
+    // console.log(graph.hasEdge('C','B'));
+    // // graph.removeVertex('B');
+    // graph.display();
 
-// console.log(graph.bfs('A'));
-// console.log(graph.dfs('A'));
+    // console.log(graph.bfs('A'));
+    // console.log(graph.dfs('A'));
 
 
 
