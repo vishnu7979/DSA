@@ -95,7 +95,7 @@ class Graph{
             return result;
         }
 
-        Rescursive(startingVertex)
+        Rescursive(startingVertex);
 
         return result
         
