@@ -2,7 +2,7 @@ function rbs(a,k,l=0,r=a.length-1){
 
     if(l<=r){
         let m=Math.floor((l+r)/2)
-
+ 
         if(a[m]===k){
             return m
         }else if(a[m]>k){
@@ -17,7 +17,7 @@ return -1;
 
 
 const a =[1,2,3,4,5,6,7,8,9,19];
-const k = 191;
+const k = 19;
 let result=rbs(a,k)
 
 if(result===-1){
