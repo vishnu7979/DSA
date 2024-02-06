@@ -74,6 +74,8 @@ class LinkedList{
     }
 
 
+    
+
     remove(index){
         if(index>this.size||index<0){
             return false;
@@ -89,7 +91,6 @@ class LinkedList{
         }
         removedNode=curr.next;
         curr.next=removedNode.next;
-
     }
         this.size--;
     }
