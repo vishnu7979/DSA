@@ -12,6 +12,7 @@ class BinarySearchTree{
     }
     
 
+    
     isEmpty(){
         return this.root===null;
     }
@@ -121,7 +122,7 @@ class BinarySearchTree{
                 return null;
             }
             if(!root.left){
-                return root.right;
+                return root.right; 
             }else if(!root.right){
                 return root.left
             }
