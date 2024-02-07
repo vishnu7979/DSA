@@ -5,7 +5,7 @@ class Stack{
     push(value){
         this.list.push(value)
     }
-    pop(value){
+    pop(){
         this.list.pop()
     }
     peek(){
