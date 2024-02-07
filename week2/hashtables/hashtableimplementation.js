@@ -45,3 +45,4 @@ table.set("name","bruce")
 table.set("age", 25);
 table.set('eag',98)
 table.display()
+ 
