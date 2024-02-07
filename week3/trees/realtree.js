@@ -121,7 +121,7 @@ class BinarySearchTree{
             if(!root.left&&!root.right){
                 return null;
             }
-            if(!root.left){
+            if(!root.left){ 
                 return root.right; 
             }else if(!root.right){
                 return root.left
