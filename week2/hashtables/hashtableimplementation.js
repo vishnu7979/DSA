@@ -36,7 +36,6 @@ class hashtable{
 
         }
     }
-
 }
 
 const table=new hashtable(40);
