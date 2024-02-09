@@ -125,7 +125,7 @@ class BinarySearchTree{
                 return root.right; 
             }else if(!root.right){
                 return root.left
-            }
+            } 
             root.value=this.min(root.right)
             root.right=this.deleteNode(root.right,root.value)
         }
