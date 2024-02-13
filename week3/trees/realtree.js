@@ -135,8 +135,6 @@ class BinarySearchTree{
         }
         return root; 
     }  
-
-
 }
 
 const bst=new  BinarySearchTree();
