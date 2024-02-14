@@ -156,3 +156,4 @@ bst.delete(5);
 console.log('deleted');
 bst.levelOrder();
 
+
