@@ -139,6 +139,7 @@ class BinarySearchTree{
  
 
 
+
 const bst=new  BinarySearchTree();
 // console.log(bst.isEmpty());
 bst.insert(10);
