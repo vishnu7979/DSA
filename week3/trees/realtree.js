@@ -136,7 +136,7 @@ class BinarySearchTree{
         return root; 
     }  
 }
-   
+      
   
 const bst=new  BinarySearchTree();
 // console.log(bst.isEmpty());
