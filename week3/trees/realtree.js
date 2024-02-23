@@ -131,14 +131,14 @@ class BinarySearchTree{
             } 
             root.value=this.min(root.right)
             root.right=this.deleteNode(root.right,root.value)
-                
+
          }
         return root; 
     }  
 }
 
   
- 
+    
 const bst=new  BinarySearchTree();
 // console.log(bst.isEmpty());
 bst.insert(10);
