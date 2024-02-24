@@ -133,7 +133,7 @@ class BinarySearchTree{
             root.right=this.deleteNode(root.right,root.value)
 
          }
-        return root; 
+        return root;  
     }  
 }
 
