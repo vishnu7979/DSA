@@ -97,6 +97,8 @@ class BinarySearchTree{
         }
     }
 
+    
+
     min(root){
         if(!root.left){
             return root.value
