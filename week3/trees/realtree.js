@@ -109,7 +109,6 @@ class BinarySearchTree{
         this.root=this.deleteNode(this.root,value)
     }
 
-         v
     deleteNode(root,value){  
         if(root===null){
             return root 
