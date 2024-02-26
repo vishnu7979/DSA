@@ -96,6 +96,8 @@ class BinarySearchTree{
             
         }
     }
+
+
     min(root){
         if(!root.left){
             return root.value
@@ -104,9 +106,11 @@ class BinarySearchTree{
         }
     } 
 
+
     delete(value){
         this.root=this.deleteNode(this.root,value)
     }
+    
 
     deleteNode(root,value){  
         if(root===null){
