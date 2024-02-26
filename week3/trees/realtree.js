@@ -103,7 +103,7 @@ class BinarySearchTree{
         }else{
             return this.min(root.left)
         }
-    }
+    } 
 
     delete(value){
         this.root=this.deleteNode(this.root,value)
