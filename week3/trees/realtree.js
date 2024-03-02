@@ -14,7 +14,6 @@ class BinarySearchTree{
     isEmpty(){
         return this.root===null;
     }
-
     insert(value){
         const node=new Node(value);
         if(this.isEmpty()){
