@@ -9,7 +9,7 @@ class Node{
 class BinarySearchTree{
     constructor(){
         this.root=null;
-    }n  
+    }
      
     isEmpty(){
         return this.root===null;
