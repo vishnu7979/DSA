@@ -21,7 +21,7 @@ class BinarySearchTree{
         }else{
             this.insertNode(this.root,node)
         }
-    }
+    }  
 
 
 
