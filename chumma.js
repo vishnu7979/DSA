@@ -6,5 +6,7 @@ const onClickHandler=()=>{
 
 
 onClickHandler();
+
 onClickHandler();
+
 onClickHandler(); 
