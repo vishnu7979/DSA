@@ -6,5 +6,4 @@ onClickHandler();
   
 onClickHandler();
  
-onClickHandler(); 
-     
+onClickHandler();
