@@ -4,7 +4,7 @@ const onClickHandler=()=>{
 } 
 
 onClickHandler();
-  fag
+ 
 onClickHandler();
  
 onClickHandler();  
