@@ -1,8 +1,6 @@
 const onClickHandler=()=>{
     console.log("hello World !!!");
 }
-
-
-onClickHandler();
+dfyonClickHandler();
 
 onClickHandler();
