@@ -3,5 +3,4 @@ const onClickHandler=()=>{
 }
  
 onClickHandler();
-
 onClickHandler(); 
