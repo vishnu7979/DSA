@@ -7,6 +7,6 @@ onClickHandler();
 sfghsgh
 frt
 WebGLVert
-exArrayOb
+ 
  
  
