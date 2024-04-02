@@ -5,9 +5,6 @@ const onClickHandler=()=>{
    
 onClickHandler();
  
- 
-
- hfghg
  hdghd
  fhdfg
  
