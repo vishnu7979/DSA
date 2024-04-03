@@ -6,9 +6,4 @@ const onClickHandler=()=>{
 onClickHandler();
 
  
-
  
-
- 
-fs.vwpe
-rig;werknpu
