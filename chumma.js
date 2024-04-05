@@ -5,9 +5,4 @@ const onClickHandler=()=>{
    
 onClickHandler();
 sdgsf
-ghkjnfgs
-;   
-ffg;ngffk
- 
-
-
+ ss
