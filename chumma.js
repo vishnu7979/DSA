@@ -5,6 +5,3 @@ const onClickHandler=()=>{
    
 onClickHandler();
  
- ;sdfvnsdk.fvndfnvk.nb
- .ksdf
- 
