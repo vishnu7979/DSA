@@ -1,6 +1,5 @@
-const onClickHandler=()=>{
-    console.log("hello World !!!");
-}
+const onClickHandler = () => {
+  console.log("hello World !!!");
+};
 onClickHandler();
 onClickHandler();
- 
