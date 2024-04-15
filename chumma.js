@@ -4,5 +4,5 @@ const onClickHandler = () => {
 onClickHandler();
 onClickHandler();
 
-glhbadfgbglifbgb
+
 uahgange4ptielja
