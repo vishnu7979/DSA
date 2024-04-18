@@ -3,6 +3,3 @@ const onClickHandler = () => {
 };
 onClickHandler();
 onClickHandler();
-
-
-ioulky
