@@ -8,4 +8,3 @@ onClickHandler();
 ioulky
 jgfkyu
 ytdgsi
-yut
