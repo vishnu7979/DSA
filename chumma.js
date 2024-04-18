@@ -6,5 +6,3 @@ onClickHandler();
 
 
 ioulky
-
-ytdgsi
