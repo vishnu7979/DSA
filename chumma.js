@@ -5,7 +5,6 @@ onClickHandler();
 onClickHandler();
 
 bdbfvhadfbvaghdbvjbadfvusdfgb 
-\kghfebvjhdfjvjkdf
-adfgjmdfgubfdjkgnbjdgf
+ adfgjmdfgubfdjkgnbjdgf
 dfwagmjdfb
   
