@@ -5,7 +5,6 @@ onClickHandler();
 onClickHandler();
 
  fhdhgh
- sdfhdfghd
  dthsfhdfgh
  dfgdgjdgj
  dncfncgfhdf
