@@ -4,4 +4,3 @@ const onClickHandler = () => {
 onClickHandler();
 onClickHandler();  
 
-\
