@@ -3,7 +3,7 @@
  var indianStates = gaul1.filter(ee.Filter.eq('ADM0_NAME', 'India'));
  var roi = indianStates.filter(ee.Filter.eq('ADM1_NAME', 'Kerala'));
  
- // Setting the study area
+
  Map.centerObject(roi);
  Map.addLayer(roi);
  
