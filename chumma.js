@@ -4,6 +4,6 @@ const onClickHandler = () => {
 onClickHandler();
 onClickHandler()
 
-xhxbxbdb
+
 xhxbdbd
 dbxbsb
