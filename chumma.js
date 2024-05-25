@@ -6,5 +6,4 @@ onClickHandler()
 gdhdbbxbdbd
 xhxbxbdb
 xhxbdbd
-dbxbsbs
-xbxbxb
+dbxbsb
