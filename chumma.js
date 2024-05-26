@@ -6,4 +6,3 @@ onClickHandler();
 judfngkdnfgi;
 keg kjnaerk;
 g ak.engladkr
-gklejng
