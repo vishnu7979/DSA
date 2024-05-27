@@ -5,6 +5,6 @@ onClickHandler();
 onClickHandler();
  
 
-serguhsdkfgnlisdhg.
+.
 ksdughsdguhsugkus
 gkdgkusdgjsdfkugskudfg
