@@ -6,7 +6,5 @@ onClickHandler();
  
 jdfghlsdfg
 sdfgjkdfg
-fjhgbgjbnfsjg
 
-sjfgknfgk
 
