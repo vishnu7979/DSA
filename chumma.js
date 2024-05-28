@@ -3,8 +3,6 @@ const onClickHandler = () => {
 }
 onClickHandler();
 onClickHandler();
- 
-
 
 
 
