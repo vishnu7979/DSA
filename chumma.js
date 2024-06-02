@@ -3,8 +3,3 @@ const onClickHandler = () => {
 }
 onClickHandler();
 onClickHandler();
-
-
-
-fkgnj
-
