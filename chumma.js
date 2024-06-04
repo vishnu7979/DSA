@@ -7,6 +7,3 @@ onClickHandler();
 
 
 
-
-
-jkgdsfhgd
