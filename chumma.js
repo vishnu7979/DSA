@@ -5,7 +5,6 @@ onClickHandler();
 onClickHandler();
 
 
-sd;goidsfkbiudfhvkfishdfkb
 sgsf
 sh
 sdfh
