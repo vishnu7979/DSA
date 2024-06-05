@@ -6,10 +6,3 @@ onClickHandler();
 
 
 
-sh
-
-s
-gh
-dfgh
-
-
