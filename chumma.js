@@ -5,9 +5,3 @@ const onClickHandler = () => {
 onClickHandler();
 onClickHandler();
 
-
-
-
-
-
-asdf
